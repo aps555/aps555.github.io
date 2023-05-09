@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alejandro Pintos Soraire">
+    <link rel="icon" href="icon.png">
+    <link href="style.css" rel="stylesheet">
+    <title>Tires Pressure Calculator</title>
+    
+</head>
+<body class="body">
+    <div id="panel_central">
+        <form method="dialog" id="myform">
+            <h1 class="title_1">Calculadora de presión de aire en neumáticos</h1>
+
+            <h2 class="text">Datos del Vehìculo</h2>
+
+            <label for="a" class="text_min"> Peso del vehiculo en kg</label>
+
+            <input class="input" min="500" max="4000" type="number" id="a" placeholder="kg" required >
+
+            <a href="https://carerac.com/tecnicas/" target="_blank"><button class="button2" type ="button">Buscar Peso</button><a><br>
+                
+            <label class="text">Pasajeros y carga.</label><br>
+            <input required type="radio" name="passengers" id = "empty" value ="2" checked ><label for = "empty" class = "text_min"> 3 Personas</label><br>
+
+            <input required type="radio" name="passengers" id="loaded" value ="4" ><label for = "loaded" class = "text_min">5 Personas</label> <br><br>
+
+            <label for="b" class="text_min"> Peso aproximado de equipaje en eje trasero </label>
+
+            <input class="input" min = "0" max = "1000" type = "number" id = "b" placeholder = "kg"><br>
+            
+             <h2 class="text"> Datos del Neumàtico</h2> <br>
+             <div> <img  class="img" src="tire_size.png" alt="tire size demo" > </div> <br>
+            
+            
+
+            <label class="text_min" for="c">Ancho</label><input class="input" type="number" name="" id="c" min="120" max="350" required><br>
+
+            <label class="text_min" for="d">Perfil</label><input class="input" type="number" name="" id="d" min="25" max="100" required><br>
+
+            <h2  class="text"> Unidades<h2><br>
+
+            <input required type="radio" name="units" id = "psi" value = "14.2233" checked ><label for = "psi" class = "text_min"> PSI</label>
+
+            <input required type="radio" name="units" id="Kg/cm²" value = "1" ><label for = "Kg/cm²" class = "text_min">Kg/cm²</label> <br>
+            
+            <button class="button1" type="submit" onclick="resolve()">Calcular</button>
+    
+            <button class="button2" type="reset" onclick="cleaner()">Limpiar</button>
+        </form>
+    </div> 
+
+        <div id="image_container">
+
+            <div><img class="image" src="image.png"alt="car_icon"></div>
+
+            <div><p><span class="num1" id="front"></span></p></div>
+
+            <div><p><span class="num2" id="rear"></span></p></div>
+        </div>
+           
+    <script src="functions.js"></script>
+</body>
+</html>
