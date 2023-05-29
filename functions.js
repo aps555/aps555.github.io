@@ -28,7 +28,7 @@ function resolve(){
     if (isNaN(LOAD)){
         LOAD = 0;
     }
-    const TOTAL_AREA = 0.95;
+    const TOTAL_AREA = 0.96;
     var TIRE_WIDECM = TIRE_WIDE * mm_cm;
     var TIRE_PROFILECM = TIRE_WIDECM * TIRE_PROFILE * PERCENT;
     const CAR_TIRES = 4;
